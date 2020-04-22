@@ -7,29 +7,38 @@
   <title>exercice7boostrap</title>
 </head>
 <body>
-  <div class="card text-center card w-25 rounded media position-relative"> <!--réduire le cadre de la card-->
-    <div class="card-body">
-      <h5 class="card-title">La Manu Le havre</h5>
-      <p class="card-text">L'école des métiers du Numérique</p>
-      <a href="#" class="btn btn-primary">+ d'infos</a>
-    </div>
-    <data-dismiss="modal" aria-label="Close">
-  </div>
-  <!--2nde fenetre--> <!--voir modal comme déjà commencer ci-dessous-->
-  <div class="container bg-white rounded text-left border border-black">
-    <div class="row">
-      <div class="col-12 font-weight-bold">
-        <p>La Manu Le Havre</p></div>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+  <!--card-->
+  <div class="container">
+    <div class="card text-center card w-50 rounded"> <!--réduire le cadre de la card-->
+      <div class="card-body">
+        <h1 class="card-title h5">La Manu Le havre</h1>
+        <p class="card-text">L'école des métiers du Numérique</p>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#informationmodal">
+          + d'infos
         </button>
-        <div class="row bg-primary">
-          <p>https//lamanu.fr/le-havre</p></div>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Fermer</a>
+        <!--autre façon bouton avec une ancre(a) <a href="#" class="btn btn-primary">+ d'info</a> -->
+      </div>
+    </div>
+
+    <!--2nde fenetre--><!-- Modal --><!--button trigger modal-->
+    <div class="modal fade" id="informationmodal" tabindex="-1" role="dialog" aria-labelledby="lamanuModalLabel" aria-hidden="true">
+      <!--aria pour accéssibilité--><!--tabindex pour la navigation au clavier-->
+      <div class="modal-dialog" role="document"> <!--role dialog pour dire que le modal sert à donner un message-->
+        <div class="modal-content"> <!--contient le reste du modal-->
+          <div class="modal-header"> <!--structure du modal-->
+            <h2 class="modal-title h5" id="lamanuModalLabel">La Manu Le Havre</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body bg-primary text-center">
+            <a title="Lien vers La Manu Le havre"class="text-white" href="https://lamanu.fr/le-Havre">https://lamanu.fr/le-Havre</a>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
           </div>
         </div>
-        
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
